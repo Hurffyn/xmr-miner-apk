@@ -1,0 +1,46 @@
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║                    APK BUILD INSTRUCTIONS (Windows)                      ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+Option 1: GitHub Actions (EASIEST - No setup needed)
+────────────────────────────────────────────────────
+1. Create GitHub repository: https://github.com/new
+2. In PowerShell, run:
+   
+   cd C:\Users\abiin\Downloads\ad-cash-miner\ad-cash
+   git remote add origin https://github.com/YOUR_USERNAME/xmr-miner.git
+   git branch -M main
+   git push -u origin main
+   
+3. Go to: https://github.com/YOUR_USERNAME/xmr-miner/actions
+4. Wait ~30 min for build
+5. Download APK from Artifacts
+
+Option 2: WSL (Ubuntu)
+──────────────────────
+1. Install WSL:
+   
+   wsl --install -d Ubuntu-22.04
+   
+2. Restart PC
+3. In Ubuntu terminal:
+   
+   cd /mnt/c/Users/abiin/Downloads/ad-cash-miner/ad-cash
+   bash build_android.sh
+   
+4. APK will be in android/bin/
+
+Option 3: Docker Desktop
+────────────────────────
+1. Install Docker Desktop: https://www.docker.com/products/docker-desktop
+2. In PowerShell:
+   
+   cd C:\Users\abiin\Downloads\ad-cash-miner\ad-cash\android
+   docker run --rm -v ${PWD}:/app kivy/buildozer android debug
+   
+3. APK in android/bin/
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║ RECOMMENDED: Option 1 (GitHub Actions) - Zero configuration needed!     ║
+╚══════════════════════════════════════════════════════════════════════════╝
