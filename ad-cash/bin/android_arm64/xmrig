@@ -1,0 +1,24 @@
+#!/bin/bash
+# XMRig ARM64 placeholder for Android
+# 
+# XMRig official releases do not include Android ARM64 binaries.
+# 
+# Options:
+# 1. Compile from source for Android using NDK:
+#    git clone https://github.com/xmrig/xmrig
+#    cd xmrig && mkdir build && cd build
+#    cmake .. -DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK/build/cmake/android.toolchain.cmake \
+#             -DANDROID_ABI=arm64-v8a -DANDROID_PLATFORM=android-21
+#    make -j$(nproc)
+#
+# 2. Use Termux build:
+#    pkg install xmrig (in Termux on Android device)
+#    Then copy binary from Termux to this location
+#
+# 3. Download third-party ARM64 build (verify source!)
+#
+# Place the ARM64 xmrig binary here and rename to 'xmrig'
+# Make it executable: chmod +x xmrig
+
+echo "XMRig ARM64 binary not included. See README for compilation instructions."
+exit 1

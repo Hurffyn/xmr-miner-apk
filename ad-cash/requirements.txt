@@ -1,0 +1,7 @@
+psutil
+requests
+base58
+pycryptodome
+PyNaCl
+numpy
+scikit-learn

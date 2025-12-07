@@ -1,0 +1,88 @@
+📁 ESTRUTURA COMPLETA DO PROJETO
+═══════════════════════════════════════════════════════════════
+
+/var/www/ad-cash/
+│
+├── 📘 DOCUMENTAÇÃO
+│   ├── README.md                    # Manual completo (450 linhas)
+│   ├── ENTREGA.md                   # Guia de entrega (300 linhas)
+│   ├── RESUMO_EXECUTIVO.md          # Resumo técnico
+│   ├── LICENSE                      # MIT + avisos legais
+│   └── ESTRUTURA.txt                # Este arquivo
+│
+├── 🐍 CORE (Python - 1.336 linhas)
+│   ├── __init__.py
+│   ├── config.py                    # Pools, limites, paths
+│   ├── ai_neural.py                 # �� MLP neural network (220 linhas)
+│   ├── ai_autotune.py               # Heuristic tuner (backup)
+│   ├── platform_sensors.py          # 🔋 Temp/bateria/throttle (150 linhas)
+│   ├── wallet_gen.py                # 🔐 Keygen Monero offline (90 linhas)
+│   ├── wallet_storage.py            # 💾 DPAPI/Keystore (130 linhas)
+│   ├── balance_tracker.py           # 💰 Pool API + parsing (80 linhas)
+│   ├── pool_selector.py             # 🌐 Latency probe (50 linhas)
+│   ├── watchdog.py                  # 🐕 Process supervision (40 linhas)
+│   ├── metrics.py                   # 📊 CoinGecko API
+│   ├── miner_controller.py          # 🎮 CLI controller
+│   └── wallet.py                    # Legacy stub
+│
+├── 🪟 WINDOWS
+│   ├── launcher.py                  # 🖥️ Tkinter UI + AI (180 linhas)
+│   └── pyinstaller.spec             # 📦 EXE build config
+│
+├── 🤖 ANDROID
+│   ├── main.py                      # 📱 Kivy UI + AI (200 linhas)
+│   ├── buildozer.spec               # 📦 APK build config
+│   └── mining_service.py            # 🔄 Background service
+│
+├── 💾 BINÁRIOS
+│   ├── windows_x64/
+│   │   └── xmrig.exe                # ✅ 6.24.0 (6.2 MB) BAIXADO
+│   └── android_arm64/
+│       └── xmrig                    # ⚠️ Placeholder (compilar)
+│
+├── 🛠️ BUILD SCRIPTS
+│   ├── build_windows.sh             # 🪟 Automated Windows build
+│   ├── build_android.sh             # 🤖 Automated Android build
+│   └── validate.sh                  # ✅ Project validation
+│
+└── 📋 CONFIGURAÇÃO
+    └── requirements.txt             # Python dependencies
+
+═══════════════════════════════════════════════════════════════
+ESTATÍSTICAS
+═══════════════════════════════════════════════════════════════
+
+📊 Código Python:        1.336 linhas em 16 arquivos
+📦 Tamanho total:        6.4 MB (com XMRig Windows)
+🧠 IA Neural:            220 linhas MLP + treino contínuo
+🔐 Wallet crypto:        90 linhas (Keccak + ed25519)
+🔋 Sensores:             150 linhas multi-plataforma
+💰 Balance tracking:     80 linhas (2 pool APIs)
+📱 UI Android:           200 linhas Kivy
+🖥️ UI Windows:           180 linhas Tkinter
+
+═══════════════════════════════════════════════════════════════
+FUNCIONALIDADES 100% IMPLEMENTADAS
+═══════════════════════════════════════════════════════════════
+
+✅ Geração automática de wallet Monero offline
+✅ Armazenamento seguro DPAPI (Windows) / Keystore (Android)
+✅ 4 pools com auto-seleção por latência
+✅ IA Neural MLP com treino contínuo
+✅ Sensores temp/bateria/throttle multi-plataforma
+✅ Balance tracking via pool API (MoneroOcean, SupportXMR)
+✅ UI mínima (saldo + hashrate + start/pause)
+✅ XMRig 6.24.0 Windows integrado
+✅ Watchdog com auto-restart
+✅ Build scripts automatizados
+✅ Documentação completa
+
+═══════════════════════════════════════════════════════════════
+BUILDS DISPONÍVEIS
+═══════════════════════════════════════════════════════════════
+
+🪟 Windows:   ./build_windows.sh → dist/XMR_Miner/XMR_Miner.exe
+🤖 Android:   ./build_android.sh → android/bin/*.apk
+               (requer XMRig ARM64 compilado primeiro)
+
+═══════════════════════════════════════════════════════════════
