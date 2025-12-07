@@ -13,7 +13,7 @@ package.domain = com.xmrminer
 version = 1.0.0
 
 # Source directory
-source.dir = ..
+source.dir = .
 
 # Source files to include
 source.include_exts = py,png,jpg,kv,atlas,json
@@ -22,10 +22,10 @@ source.include_exts = py,png,jpg,kv,atlas,json
 source.exclude_exts = spec
 
 # Application entry point
-source.include_patterns = assets/*,bin/android_arm64/*
+source.include_patterns = 
 
 # Entry point
-entrypoint = android/main.py
+entrypoint = main.py
 
 # Android permissions
 android.permissions = INTERNET,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE,WAKE_LOCK,ACCESS_NETWORK_STATE,FOREGROUND_SERVICE
